@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert software testing, mobile app testing, website testing, and website maintenance services. Ensure your digital products work flawlessly.">
+    <title>INTEGRAQA - Professional Web Services & Software Testing</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="pt-20 min-h-screen bg-white">
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0 md:space-x-4 z-[9999]" style="display: none;">
+    <p class="text-sm">
+        We use cookies to improve your experience. By using our site, you agree to our 
+        <a href="privacy.html" class="underline text-blue-400">Privacy Policy</a>.
+    </p>
+    <button id="acceptCookies" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded text-sm">
+        Accept
+    </button>
+    </div>
+    <!-- Navigation -->
+    <nav class="shadow-lg fixed w-full top-0 z-50" style="background-color: #000026;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <div class="flex items-center space-x-2">
+                            <div class="relative">
+                                <svg class="h-10 w-10 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 18 22 12 16 6"></path>
+                                    <path d="M8 6 2 12 8 18"></path>
+                                </svg>
+                                <svg class="h-5 w-5 text-yellow-400 absolute -top-1 -right-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                                </svg>
+                            </div>
+                            <span class="text-3xl font-bold">
+                                <span class="text-blue-400">INTEGRA</span>
+                                <span class="text-white">QA</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html" class="px-3 py-2 hover:text-blue-400 transition-colors text-white">Home</a>
+                    <div class="relative group">
+                        <button class="px-3 py-2 hover:text-blue-400 transition-colors flex items-center text-white">
+                            Services
+                            <svg class="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="absolute left-1/2 -translate-x-[55%] mt-2 w-[560px] bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div class="grid grid-cols-2 gap-x-4 p-2">
+                                <a href="testing-process.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded">Testing Process</a>
+                                <a href="test-automation.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded">Test Automation</a>
+                                <a href="mobile-apps-testing.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded">Mobile App Testing</a>
+                                <a href="api-testing.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded">API Testing</a>
+                                <a href="web-application-testing.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded">Web Application Testing</a>
+                                <a href="saas-cloud-testing.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded">SaaS & Cloud Platform Testing</a>
+                                <a href="crm-testing.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded">CRM Testing</a>
+                                <a href="website-testing.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded">Website Testing</a>
+                                <a href="website-maintenance.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded">Website Maintenance</a>
+                                <a href="systems-integration-testing.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded">Systems Integration Testing</a>
+                                <a href="software-testing.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded">Desktop App Testing</a>
+                                <a href="maintenance.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded">Maintenance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="px-3 py-2 hover:text-blue-400 transition-colors text-white">About</a>
+                    <a href="contact.html" class="px-3 py-2 hover:text-blue-400 transition-colors text-white">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="hover:text-blue-400 transition-colors text-white">
+                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400" style="color: #000026;">Home</a>
+                <div class="space-y-1">
+                    <button onclick="toggleServicesMenu()" class="w-full flex items-center justify-between px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 font-medium" style="color: #000026;">
+                        <span>Services</span>
+                        <svg id="servicesArrow" class="h-4 w-4 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div id="servicesSubmenu" class="hidden space-y-1">
+                        <a href="testing-process.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Testing Process</a>
+                        <a href="test-automation.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Test Automation</a>
+                        <a href="mobile-apps-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Mobile App Testing</a>
+                        <a href="api-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">API Testing</a>
+                        <a href="web-application-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Web Application Testing</a>
+                        <a href="saas-cloud-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">SaaS & Cloud Testing</a>
+                        <a href="crm-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">CRM Testing</a>
+                        <a href="website-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Website Testing</a>
+                        <a href="website-maintenance.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Website Maintenance</a>
+                        <a href="systems-integration-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Systems Integration Testing</a>
+                        <a href="software-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Desktop App Testing</a>
+                        <a href="maintenance.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Maintenance</a>
+                    </div>
+                </div>
+                <a href="about.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400" style="color: #000026;">About</a>
+                <a href="contact.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400" style="color: #000026;">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative h-[50vh] md:h-[70vh] flex items-center overflow-hidden rounded-b-[50px]" style="background: linear-gradient(135deg, #000026 0%, #001847 50%, #002266 100%);">
+        <!-- Simplified background for mobile performance -->
+        <div class="absolute inset-0 opacity-10 hidden md:block">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+            <div class="absolute top-40 right-20 w-96 h-96 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 w-full">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-left">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl md:text-6xl font-bold text-white mb-2 animate-fade-in leading-tight" style="white-space: nowrap;">
+                        <span class="relative inline-block mr-3">
+                            Expert
+                            <svg class="absolute left-0 -bottom-2 w-full" viewBox="0 0 200 20" preserveAspectRatio="none" style="height: 12px;">
+                                <path d="M 0,10 Q 50,15 100,10 T 200,10" stroke="#D4A017" stroke-width="3" fill="none" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span style="color: #60A5FA;">Software Testing</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg md:text-xl md:text-2xl text-slate-200 mb-2 animate-fade-in-delay font-semibold">
+                        Quality Without Compromise
+                    </p>
+
+                    <p class="text-base sm:text-lg md:text-xl text-slate-300 mb-5 animate-fade-in-delay leading-relaxed">
+                        <strong>Empowering businesses to launch with confidence.</strong>
+                        <br>
+                        Combining deep QA expertise with a smart, tailored testing strategy to bring clarity, consistency, and quality to every project.
+                    </p>
+                </div>
+                <div class="hidden md:block"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8 text-center sm:text-left">
+                    Delivering exceptional software quality starts with skilled professionals. Backed by over 15 years of experience and ISTQB certified experts, our team provide all the testing you need, from detailed test planning to execution and reporting, ensuring the highest standards of software quality.
+                </p>
+                <div class="max-w-7xl mx-auto mb-12 flex flex-col md:grid md:grid-cols-2 gap-12 items-center">
+                    <div class="flex items-center order-1">
+                        <p class="text-lg text-gray-800 leading-relaxed text-center md:text-justify">
+                            At INTEGRAQA, we provide comprehensive, end-to-end QA solutions designed to elivate software reliability and enhance user confidence. We believe that exceptional outcomes begin with strategic, thoughtful planning — and we bring that mindset to every project we undertake.<br><br>
+                            Our experienced QA engineers conduct rigorous manual testing to ensure your product's functionality, usability, and performance align with your exact specifications. To support efficiency and scalability, we also employ advanced automation frameworks, delivering fast, data-driven results ideal for regression, performance, and repetitive test cycles.
+                        </p>
+                    </div>
+                    <div class="rounded-3xl overflow-hidden order-4 md:order-2">
+                        <img src="images/photo1.jpg" alt="Description of image">
+
+                    </div>
+
+                    <div class="rounded-3xl overflow-hidden order-2 md:order-3">
+                        <img src="images/photo2.jpg" alt="Description of image">
+
+                    </div>
+                    <div class="flex items-center order-3 md:order-4">
+                        <p class="text-lg text-gray-800 leading-relaxed text-center md:text-justify">
+                            Partnering closely with your team, we ensure your product meets the highest standards of accuracy, consistency, and quality. Our mission is simple: to help you deliver software that performs flawlessly — every time.<br><br>
+                            We offer flexible QA service packages designed to fit each client's goals, scope, and budget. Whether you need full-cycle testing, manual or automated testing, or just an extra layer of quality assurance before launch, our expert team will craft a customized solution that delivers the best value for your investment.
+                        </p>
+                    </div>
+                </div>
+
+
+                <h2 class="text-3xl font-bold text-gray-900 mt-16 text-center order-5">
+                    Our Services
+                </h2>
+                <p class="text-lg text-gray-600 max-w-4xl mx-auto mt-4 text-center">
+                    We provide end-to-end Quality Assurance solutions across multiple platforms and technologies. Each service is tailored to ensure flawless performance, exceptional user experience, and dependable product stability.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <a href="mobile-apps-testing.html" class="text-center p-6 bg-gradient-to-br from-slate-50 to-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #000026;">
+                        <svg class="h-7 w-7 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3" style="color: #000026;">Mobile App Testing</h3>
+                    <p class="text-sm text-gray-600">
+                        High-quality testing for iOS and Android applications
+                    </p>
+                </a>
+
+                <a href="api-testing.html" class="text-center p-6 bg-gradient-to-br from-slate-50 to-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #000026;">
+                        <svg class="h-7 w-7 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3" style="color: #000026;">API Testing</h3>
+                    <p class="text-sm text-gray-600">
+                        Ensuring your backend works seamlessly and reliably
+                    </p>
+                </a>
+
+                <a href="web-application-testing.html" class="text-center p-6 bg-gradient-to-br from-slate-50 to-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #000026;">
+                        <svg class="h-7 w-7 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                            <path d="M9 3v18"></path>
+                            <path d="m16 15-3-3 3-3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3" style="color: #000026;">Web Application Testing</h3>
+                    <p class="text-sm text-gray-600">
+                        Comprehensive testing for all browser-based applications
+                    </p>
+                </a>
+
+                <a href="saas-cloud-testing.html" class="text-center p-6 bg-gradient-to-br from-slate-50 to-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #000026;">
+                        <svg class="h-7 w-7 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3" style="color: #000026;">SaaS & Cloud Platform Testing</h3>
+                    <p class="text-sm text-gray-600">
+                        Ensuring your cloud-based platforms perform reliably, scale effectively, and remain secure
+                    </p>
+                </a>
+
+                <a href="crm-testing.html" class="text-center p-6 bg-gradient-to-br from-slate-50 to-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #000026;">
+                        <svg class="h-7 w-7 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3" style="color: #000026;">CRM Testing</h3>
+                    <p class="text-sm text-gray-600 px-2">
+                        Comprehensive testing for Customer Relationship Management systems
+                    </p>
+                </a>
+
+                <a href="website-testing.html" class="text-center p-6 bg-gradient-to-br from-slate-50 to-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #000026;">
+                        <svg class="h-7 w-7 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3" style="color: #000026;">Website Testing</h3>
+                    <p class="text-sm text-gray-600">
+                        Professional website testing to deliver exceptional user experiences
+                    </p>
+                </a>
+
+                <a href="website-maintenance.html" class="text-center p-6 bg-gradient-to-br from-slate-50 to-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #000026;">
+                        <svg class="h-7 w-7 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3" style="color: #000026;">Website Maintenance</h3>
+                    <p class="text-sm text-gray-600">
+                        Keep your website running smoothly with our maintenance services
+                    </p>
+                </a>
+
+                <a href="software-testing.html" class="text-center p-6 bg-gradient-to-br from-slate-50 to-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #000026;">
+                        <svg class="h-7 w-7 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3" style="color: #000026;">Desktop App Testing</h3>
+                    <p class="text-sm text-gray-600">
+                        Ensuring your desktop software runs reliably, securely, and smoothly
+                    </p>
+                </a>
+
+                <a href="systems-integration-testing.html" class="text-center p-6 bg-gradient-to-br from-slate-50 to-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #000026;">
+                        <svg class="h-7 w-7 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v6"></path>
+                            <path d="M12 16v6"></path>
+                            <path d="m2 12 6 0"></path>
+                            <path d="m16 12 6 0"></path>
+                            <circle cx="12" cy="12" r="2"></circle>
+                            <path d="m4.93 4.93 4.24 4.24"></path>
+                            <path d="m14.83 14.83 4.24 4.24"></path>
+                            <path d="m14.83 9.17 4.24-4.24"></path>
+                            <path d="m4.93 19.07 4.24-4.24"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3" style="color: #000026;">Systems Integration Testing</h3>
+                    <p class="text-sm text-gray-600">
+                        Ensuring all connected systems communicate and operate seamlessly
+                    </p>
+                </a>
+
+                <a href="maintenance.html" class="text-center p-6 bg-gradient-to-br from-slate-50 to-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #000026;">
+                        <svg class="h-7 w-7 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="m9 12 2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3" style="color: #000026;">Maintenance</h3>
+                    <p class="text-sm text-gray-600 px-2">
+                        Keep your products running smoothly with our ongoing maintenance services
+                    </p>
+                </a>
+
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="contact.html" class="inline-block px-8 py-4 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    Get a Free Consultation
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testing Types Section -->
+    <div class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Testing Types</h2>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-2">
+                <!-- Functional Testing -->
+                <div class="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #000026;">
+                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-semibold mb-1" style="color: #000026;">Functional Testing</h3>
+                        <p class="text-sm text-gray-600">
+                            We verify every feature works exactly as intended, ensuring full alignment with your business requirements.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Regression Testing -->
+                <div class="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #000026;">
+                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-semibold mb-1" style="color: #000026;">Regression Testing</h3>
+                        <p class="text-sm text-gray-600">
+                            We retest critical workflows to confirm updates, fixes, or enhancements never introduce new issues.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Integration Testing -->
+                <div class="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #000026;">
+                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-semibold mb-1" style="color: #000026;">Integration Testing</h3>
+                        <p class="text-sm text-gray-600">
+                            We evaluate how well your modules, systems, and APIs communicate, ensuring flawless end-to-end interaction.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- System Testing -->
+                <div class="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #000026;">
+                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-semibold mb-1" style="color: #000026;">System Testing</h3>
+                        <p class="text-sm text-gray-600">
+                            A complete, holistic assessment of your entire product, validating stability, quality, and seamless operation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Acceptance Testing -->
+                <div class="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #000026;">
+                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-semibold mb-1" style="color: #000026;">Acceptance Testing</h3>
+                        <p class="text-sm text-gray-600">
+                            We test from a true end-user perspective to confirm your product is ready for launch and meets expectations.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Performance Testing -->
+                <div class="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #000026;">
+                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-semibold mb-1" style="color: #000026;">Performance & Load Testing</h3>
+                        <p class="text-sm text-gray-600">
+                            We measure speed, responsiveness, and reliability under real-world and extreme usage conditions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Security Testing -->
+                <div class="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #000026;">
+                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-semibold mb-1" style="color: #000026;">Security Testing</h3>
+                        <p class="text-sm text-gray-600">
+                            We identify vulnerabilities and ensure your system protects user data and business integrity.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Usability Testing -->
+                <div class="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #000026;">
+                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-semibold mb-1" style="color: #000026;">Usability Testing</h3>
+                        <p class="text-sm text-gray-600">
+                            We evaluate the product's clarity, intuitiveness, and user experience—ensuring effortless interaction.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Compatibility Testing -->
+                <div class="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #000026;">
+                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-semibold mb-1" style="color: #000026;">Compatibility Testing</h3>
+                        <p class="text-sm text-gray-600">
+                            We confirm consistent performance across browsers, devices, operating systems, and environments.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Exploratory Testing -->
+                <div class="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #000026;">
+                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.3-4.3"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-semibold mb-1" style="color: #000026;">Exploratory Testing</h3>
+                        <p class="text-sm text-gray-600">
+                            Our expert testers dive deeper to uncover unexpected issues beyond scripted scenarios.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Automation Testing -->
+                <div class="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #000026;">
+                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
+                            <path d="M8.5 8.5v.01"></path>
+                            <path d="M16 15.5v.01"></path>
+                            <path d="M12 12v.01"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-semibold mb-1" style="color: #000026;">Automation Testing</h3>
+                        <p class="text-sm text-gray-600">
+                            We design and implement robust automation suites that accelerate testing and enhance release confidence.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- UX & Usability Reviews -->
+                <div class="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #000026;">
+                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-semibold mb-1" style="color: #000026;">UX & Usability Reviews</h3>
+                        <p class="text-sm text-gray-600">
+                            We conduct expert evaluations of the user journey, identifying friction points, clarity issues, and interaction gaps. Our reviews ensure your product feels intuitive, elegant, and effortless for every user.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="contact.html" class="inline-block px-8 py-4 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    Get a Free Consultation
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us -->
+    <div class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Why Choose INTEGRAQA</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Expert-Led Testing From Start to Finish<br>
+                    Every project is overseen by highly experienced, fully qualified Senior Test Managers. They lead the requirements review, estimation, and full test planning—ensuring your project begins with a strong, strategic foundation. Because we believe: a project well planned is a project well delivered.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #000026;">
+                        <svg class="h-8 w-8 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" style="color: #000026;">Skilled Testers You Can Rely On</h3>
+                    <p class="text-gray-600">
+                        Our team of seasoned testers executes every test with precision, accuracy, and a deep understanding of real-world quality challenges. You get expertise, not guesswork.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #000026;">
+                        <svg class="h-8 w-8 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" style="color: #000026;">Comprehensive Solutions for Every Testing Need</h3>
+                    <p class="text-gray-600">
+                        From websites and mobile apps to complex cloud platforms, APIs, and desktop software—we provide full end-to-end coverage. Whatever you need tested, we have a solution designed to support it.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #000026;">
+                        <svg class="h-8 w-8 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" style="color: #000026;">Cost-Effective Without Compromise</h3>
+                    <p class="text-gray-600">
+                        We provide premium-level testing at competitive rates, ensuring exceptional value without sacrificing quality.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #000026;">
+                        <svg class="h-8 w-8 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" style="color: #000026;">UK-Based Team, Global Standards</h3>
+                    <p class="text-gray-600">
+                        We operate from the UK and follow industry-leading processes and frameworks, delivering professional, dependable QA services you can trust.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #000026;">
+                        <svg class="h-8 w-8 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" style="color: #000026;">Tailored & Flexible Testing Packages</h3>
+                    <p class="text-gray-600">
+                        No two products are the same—so no two testing solutions should be either. We create customised testing packages designed around your product, timeline, and requirements, ensuring maximum value and effectiveness.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #000026;">
+                        <svg class="h-8 w-8 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" style="color: #000026;">Transparent Communication & True Partnership</h3>
+                    <p class="text-gray-600">
+                        We work closely with you throughout the project, providing regular updates, clear reporting, and total visibility. You're not left wondering where things stand.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #000026;">
+                        <svg class="h-8 w-8 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" style="color: #000026;">Dedicated Support After Delivery</h3>
+                    <p class="text-gray-600">
+                        Our partnership doesn't end once the testing is complete. We offer post-delivery support, including free 30-day testing assistance and optional maintenance packages to ensure long-term product stability.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: #000026;">
+                        <svg class="h-8 w-8 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4" style="color: #000026;">Quality Without Compromise</h3>
+                    <p class="text-gray-600">
+                        Our mission is simple: deliver flawless software and exceptional client experience, every time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="relative py-24 bg-gradient-to-br from-blue-700 to-blue-900 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+                Let us help you ensure your digital products work flawlessly
+            </p>
+            <a href="contact.html" class="inline-flex items-center px-8 py-4 text-white rounded-lg transition-all duration-300 transform hover:scale-105 font-bold text-lg shadow-xl" style="background-color: #D4A017;">
+                <svg class="mr-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                Contact Us Today
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-6 mb-6">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-3">
+                        <div class="relative mr-2">
+                            <svg class="h-6 w-6 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 18 22 12 16 6"></path>
+                                <path d="M8 6 2 12 8 18"></path>
+                            </svg>
+                            <svg class="h-4 w-4 text-blue-400 absolute -top-1 -right-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold">
+                            <span class="text-blue-400">INTEGRA</span>
+                            <span class="text-white">QA</span>
+                        </span>
+                    </div>
+                    <p class="text-gray-300 text-xs mb-3 max-w-md">
+                        Professional software testing, mobile app testing, and website maintenance services
+                        to ensure your digital products work flawlessly.
+                    </p>
+                    <div class="space-y-1.5">
+                        <div class="flex items-center">
+                            <svg class="h-3.5 w-3.5 text-blue-400 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <a href="mailto:contact@integraqa.com" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">
+                                contact@integraqa.com
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-3.5 w-3.5 text-blue-400 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <a href="tel:01617928942" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">
+                                (0)161 792 8942
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-3.5 w-3.5 text-blue-400 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="text-gray-300 text-xs">Manchester UK</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold text-white mb-2">Services</h3>
+                    <ul class="space-y-1">
+                        <li><a href="software-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Desktop App Testing</a></li>
+                        <li><a href="mobile-apps-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Mobile App Testing</a></li>
+                        <li><a href="api-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">API Testing</a></li>
+                        <li><a href="web-application-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Web Application Testing</a></li>
+                        <li><a href="saas-cloud-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">SaaS & Cloud Platform Testing</a></li>
+                        <li><a href="crm-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">CRM Testing</a></li>
+                        <li><a href="website-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Website Testing</a></li>
+                        <li><a href="website-maintenance.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Website Maintenance</a></li>
+                        <li><a href="systems-integration-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Systems Integration Testing</a></li>
+                        <li><a href="maintenance.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Maintenance</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold text-white mb-2">Quick Links</h3>
+                    <ul class="space-y-1">
+                        <li><a href="index.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">About</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Contact</a></li>
+                        <li><a href="cookies-policy.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Cookies Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-4 mt-4 border-t border-gray-700">
+                <div class="flex flex-col md:flex-row justify-between items-center text-xs">
+                    <div class="mb-2 md:mb-0 text-gray-400">
+                        © 2024 INTEGRAQA. All rights reserved.
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+                <div class="mt-2 text-center text-gray-400 text-xs">
+                    Integra QA is a trading name of Integral Software Services Ltd, registered in England and Wales
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu) {
+                menu.classList.toggle('hidden');
+            }
+        }
+
+        function toggleServicesMenu() {
+            const submenu = document.getElementById('servicesSubmenu');
+            const arrow = document.getElementById('servicesArrow');
+            if (submenu && arrow) {
+                submenu.classList.toggle('hidden');
+                arrow.classList.toggle('rotate-180');
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobileMenu');
+            const menuButton = event.target.closest('button[onclick="toggleMobileMenu()"]');
+
+            if (menu && !menu.contains(event.target) && !menuButton && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.getElementById('mobileMenu')?.addEventListener('click', function(event) {
+            if (event.target.tagName === 'A') {
+                this.classList.add('hidden');
+            }
+        });
+    </script>
+
+    <!-- Cookie Consent Script -->
+    <script>
+    (function() {
+        const cookieBanner = document.getElementById('cookieBanner');
+        const acceptBtn = document.getElementById('acceptCookies');
+
+        // Only show banner if consent not yet given
+        if (!localStorage.getItem('cookiesAccepted')) {
+            cookieBanner.style.display = 'flex';
+        }
+
+        // Click handler for Accept
+        acceptBtn.addEventListener('click', function() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieBanner.style.display = 'none';
+
+            // Load Google Analytics after consent
+            if (!window.gtag) {
+                const gaScript = document.createElement('script');
+                gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-49PM9XF9CQ";
+                gaScript.async = true;
+                document.head.appendChild(gaScript);
+
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                window.gtag = gtag; // expose globally
+                gtag('js', new Date());
+                gtag('config', 'G-49PM9XF9CQ');
+            }
+        });
+    })();
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const banner = document.getElementById("cookieBanner");
+            const acceptBtn = document.getElementById("acceptCookies");
+
+            if (!localStorage.getItem("cookiesAccepted")) {
+                setTimeout(() => {
+                    banner.classList.add("show");
+                }, 1000); // little delay for smooth entrance
+            }
+
+            acceptBtn.addEventListener("click", function () {
+                banner.classList.remove("show");
+                localStorage.setItem("cookiesAccepted", "true");
+            });
+        });
+    </script>
+
+</body>
+</html>
