@@ -40,15 +40,15 @@
 </head>
 <body class="pt-20 min-h-screen bg-white">
     <!-- Cookie Consent Banner -->
-    <div id="cookieBanner" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0 md:space-x-4 z-[9999]" style="display: none;">
-    <p class="text-sm">
-        We use cookies to improve your experience. By using our site, you agree to our 
-        <a href="privacy.html" class="underline text-blue-400">Privacy Policy</a>.
-    </p>
-    <button id="acceptCookies" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded text-sm">
-        Accept
-    </button>
-    </div>
+    <!-- <div id="cookieBanner" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0 md:space-x-4 z-[9999]" style="display: none;">
+        <p class="text-sm">
+            We use cookies to improve your experience. By using our site, you agree to our 
+            <a href="privacy.html" class="underline text-blue-400">Privacy Policy</a>.
+        </p>
+        <button id="acceptCookies" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded text-sm">
+            Accept
+        </button>
+    </div> -->
     <!-- Navigation -->
     <nav class="shadow-lg fixed w-full top-0 z-50" style="background-color: #000026;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -189,48 +189,33 @@
     <div id="services" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <!-- <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-8 text-center sm:text-left">
+                <p class="text-lg font-semibold text-gray-700 max-w-3xl mx-auto mb-8 text-center sm:text-left">
                     Delivering exceptional software quality starts with skilled professionals. Backed by over 15 years of experience and ISTQB certified experts, our team provide all the testing you need, from detailed test planning to execution and reporting, ensuring the highest standards of software quality.
-                </p> -->
-                
+                </p>
                 <div class="max-w-7xl mx-auto mb-12 flex flex-col md:grid md:grid-cols-2 gap-12 items-center">
-                    <!-- 1st Image -->
-                    <div class="overflow-hidden order-1 md:order-1">
-                        <img src="images/upload/sec1.webp" alt="Manual software testing process illustration" loading="lazy">
-                    </div>
-
-                    <!-- 1st Text -->
-                    <div class="flex items-center order-2 md:order-2">
+                    <div class="flex items-center order-1">
                         <p class="text-lg text-gray-800 leading-relaxed text-center md:text-justify">
-                            Delivering exceptional software quality starts with skilled professionals. Backed by over 15 years of experience and ISTQB certified experts, our team provide all the testing you need, from detailed test planning to execution and reporting, ensuring the highest standards of software quality.
+                            At INTEGRAQA, we provide comprehensive, end-to-end QA solutions designed to elivate software reliability and enhance user confidence. We believe that exceptional outcomes begin with strategic, thoughtful planning — and we bring that mindset to every project we undertake.<br><br>
+                            Our experienced QA engineers conduct rigorous manual testing to ensure your product's functionality, usability, and performance align with your exact specifications. To support efficiency and scalability, we also employ advanced automation frameworks, delivering fast, data-driven results ideal for regression, performance, and repetitive test cycles.
                         </p>
                     </div>
+                    <div class="rounded-3xl overflow-hidden order-4 md:order-2">
+                        <img src="images/photo1.jpg" alt="Description of image">
 
-                    <!-- 2nd Image -->
-                    <div class="overflow-hidden order-3 md:order-4">
-                        <img src="images/upload/sec2.webp" alt="Automated testing tools and workflow diagram" loading="lazy">
                     </div>
 
-                    <!-- 2nd Text -->
-                    <div class="flex items-center order-4 md:order-3">
+                    <div class="rounded-3xl overflow-hidden order-2 md:order-3">
+                        <img src="images/photo2.jpg" alt="Description of image">
+
+                    </div>
+                    <div class="flex items-center order-3 md:order-4">
                         <p class="text-lg text-gray-800 leading-relaxed text-center md:text-justify">
-                            At INTEGRAQA, we provide comprehensive, end-to-end QA solutions designed to elivate software reliability and enhance user confidence. We believe that exceptional outcomes begin with strategic, thoughtful planning — and we bring that mindset to every project we undertake.
+                            Partnering closely with your team, we ensure your product meets the highest standards of accuracy, consistency, and quality. Our mission is simple: to help you deliver software that performs flawlessly — every time.<br><br>
+                            We offer flexible QA service packages designed to fit each client's goals, scope, and budget. Whether you need full-cycle testing, manual or automated testing, or just an extra layer of quality assurance before launch, our expert team will craft a customized solution that delivers the best value for your investment.
                         </p>
                     </div>
-
-                    <!-- 3rd Image -->
-                    <div class="overflow-hidden order-5 md:order-5">
-                        <img src="images/upload/sec3.webp" alt="Quality assurance team reviewing test results" loading="lazy">
-                    </div>
-
-                    <!-- 3rd Text -->
-                    <div class="flex items-center order-6 md:order-6">
-                        <p class="text-lg text-gray-800 leading-relaxed text-center md:text-justify">
-                            Partnering closely with your team, we ensure your product meets the highest standards of accuracy, consistency, and quality. Our mission is simple: to help you deliver software that performs flawlessly — every time.
-                        </p>
-                    </div>
-
                 </div>
+
 
                 <h2 class="text-3xl font-bold text-gray-900 mt-16 text-center order-5">
                     Our Services
@@ -832,6 +817,39 @@
         </div>
     </footer>
 
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent"
+        class="fixed bottom-4 left-4 right-4 bg-gray-800 text-white p-4 rounded shadow-lg flex flex-col md:flex-row justify-between items-center gap-2 z-50">
+        <span>This website uses cookies to improve your experience. By continuing, you agree to our <a href="privacy-policy.html"
+                class="underline text-blue-400">Privacy Policy</a>.</span>
+        <button onclick="acceptCookies()"
+            class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded font-semibold">Accept</button>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function toggleServicesMenu() {
+            const submenu = document.getElementById('servicesSubmenu');
+            const arrow = document.getElementById('servicesArrow');
+            submenu.classList.toggle('hidden');
+            arrow.classList.toggle('rotate-180');
+        }
+
+        // Cookie consent
+        function acceptCookies() {
+            document.getElementById('cookieConsent').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+        if (localStorage.getItem('cookiesAccepted') === 'true') {
+            document.getElementById('cookieConsent').style.display = 'none';
+        }
+    </script>
+
     <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
@@ -868,7 +886,7 @@
     </script>
 
     <!-- Cookie Consent Script -->
-    <script>
+    <!-- <script>
     (function() {
         const cookieBanner = document.getElementById('cookieBanner');
         const acceptBtn = document.getElementById('acceptCookies');
@@ -898,9 +916,9 @@
             }
         });
     })();
-    </script>
+    </script> -->
 
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function () {
             const banner = document.getElementById("cookieBanner");
             const acceptBtn = document.getElementById("acceptCookies");
@@ -916,7 +934,7 @@
                 localStorage.setItem("cookiesAccepted", "true");
             });
         });
-    </script>
+    </script> -->
 
 </body>
 </html>

@@ -11,7 +11,6 @@
     <meta name="keywords" content="testing process, QA process, testing methodology, test planning, test execution, software testing workflow">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.integraqa.com/testing-process.html">
-    <meta name="theme-color" content="#000026">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -36,17 +35,12 @@
         gtag('config', 'G-49PM9XF9CQ');
     </script>
 
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico">
-
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="pt-20 min-h-screen bg-white">
-
-    <!-- Skip Navigation -->
-    <a href="#main" class="sr-only focus:not-sr-only bg-yellow-500 text-white p-2 rounded z-50 fixed top-2 left-2">Skip to main content</a>
-
     <!-- Navigation -->
     <nav class="bg-gray-900 shadow-lg fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,15 +67,15 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-4">
-                    <a href="index.html" class="px-3 py-2 text-gray-300 hover:text-amber-400 transition-colors">Home</a>
+                    <a href="index.html" class="px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors">Home</a>
                     <div class="relative group">
-                        <button class="px-3 py-2 text-gray-300 hover:text-amber-400 transition-colors flex items-center" aria-expanded="false" aria-controls="servicesMenu">
+                        <button class="px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors flex items-center">
                             Services
                             <svg class="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="m6 9 6 6 6-6"/>
                             </svg>
                         </button>
-                        <div id="servicesMenu" class="absolute left-1/2 -translate-x-[55%] mt-2 w-[560px] bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-1/2 -translate-x-[55%] mt-2 w-[560px] bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <div class="grid grid-cols-2 gap-x-4 p-2">
                                 <a href="testing-process.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded">Testing Process</a>
                                 <a href="test-automation.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded">Test Automation</a>
@@ -97,14 +91,14 @@
                                 <a href="maintenance.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 rounded">Maintenance</a>
                             </div>
                         </div>
-                    </div>
-                    <a href="about.html" class="px-3 py-2 text-gray-300 hover:text-amber-400 transition-colors">About</a>
-                    <a href="contact.html" class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors">Contact</a>
+                    </div>  
+                    <a href="about.html" class="px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors">About</a>
+                    <a href="contact.html" class="px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors">Contact</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="mobileMenu" class="text-gray-300 hover:text-amber-400 transition-colors">
+                    <button onclick="toggleMobileMenu()" class="text-gray-300 hover:text-blue-400">
                         <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="3" y1="12" x2="21" y2="12"></line>
                             <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -116,115 +110,344 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg transition-max-height overflow-hidden duration-300">
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 text-black">Home</a>
+                <a href="index.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400" style="color: #000026;">Home</a>
                 <div class="space-y-1">
-                    <button onclick="toggleServicesMenu()" id="mobileServicesButton" class="w-full flex items-center justify-between px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 font-medium text-black" aria-expanded="false" aria-controls="servicesSubmenuMobile">
+                    <button onclick="toggleServicesMenu()" class="w-full flex items-center justify-between px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 font-medium" style="color: #000026;">
                         <span>Services</span>
                         <svg id="servicesArrow" class="h-4 w-4 transform transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="m6 9 6 6 6-6"/>
                         </svg>
                     </button>
-                    <div id="servicesSubmenuMobile" class="hidden space-y-1 pl-4">
-                        <a href="testing-process.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 text-sm text-black">Testing Process</a>
-                        <a href="test-automation.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 text-sm text-black">Test Automation</a>
-                        <a href="mobile-apps-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 text-sm text-black">Mobile App Testing</a>
-                        <a href="api-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 text-sm text-black">API Testing</a>
-                        <a href="web-application-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 text-sm text-black">Web Application Testing</a>
-                        <a href="saas-cloud-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 text-sm text-black">SaaS & Cloud Testing</a>
-                        <a href="crm-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 text-sm text-black">CRM Testing</a>
-                        <a href="website-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 text-sm text-black">Website Testing</a>
-                        <a href="website-maintenance.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 text-sm text-black">Website Maintenance</a>
-                        <a href="systems-integration-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 text-sm text-black">Systems Integration Testing</a>
-                        <a href="software-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 text-sm text-black">Desktop App Testing</a>
-                        <a href="maintenance.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 text-sm text-black">Maintenance</a>
+                    <div id="servicesSubmenu" class="hidden space-y-1">
+                        <a href="testing-process.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Testing Process</a>
+                        <a href="test-automation.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Test Automation</a>
+                        <a href="mobile-apps-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Mobile App Testing</a>
+                        <a href="api-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">API Testing</a>
+                        <a href="web-application-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Web Application Testing</a>
+                        <a href="saas-cloud-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">SaaS & Cloud Testing</a>
+                        <a href="crm-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">CRM Testing</a>
+                        <a href="website-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Website Testing</a>
+                        <a href="website-maintenance.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Website Maintenance</a>
+                        <a href="systems-integration-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Systems Integration Testing</a>
+                        <a href="software-testing.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Desktop App Testing</a>
+                        <a href="maintenance.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 pl-6 text-sm" style="color: #000026;">Maintenance</a>
                     </div>
                 </div>
-                <a href="about.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 text-black">About</a>
-                <a href="contact.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400 text-black">Contact</a>
+                <a href="about.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400" style="color: #000026;">About</a>
+                <a href="contact.html" class="block px-3 py-2 rounded hover:bg-gray-100 hover:text-blue-400" style="color: #000026;">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main id="main">
+    <!-- Hero Section -->
+    <!-- <div class="hero-section text-white overflow-hidden relative rounded-b-3xl" style="background: linear-gradient(135deg, #000026 0%, #001847 50%, #002266 100%);">
+        <div class="absolute inset-0 bg-[url('/images/upload/photo-1454165804606-c3d57bc86b40.webp')] bg-cover bg-center opacity-30"></div>
+        <div class="absolute inset-0 opacity-10 hidden md:block">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+            <div class="absolute top-40 right-20 w-96 h-96 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative py-16 z-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl md:text-6xl font-bold text-white mb-4 sm:mb-6">
+                Our <span class="text-amber-400">Testing Process</span>
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl text-slate-200 max-w-3xl mx-auto">
+                A comprehensive, structured approach to ensure your software meets the highest quality standards
+            </p>
+        </div>
+    </div> -->
 
-        <!-- Hero Section -->
-        <section aria-label="Hero Section" class="hero-section text-white overflow-hidden relative rounded-b-3xl" style="background: linear-gradient(135deg, #000026 0%, #001847 50%, #002266 100%);">
-            <div class="absolute inset-0 bg-[url('/images/upload/photo-1454165804606-c3d57bc86b40.webp')] bg-cover bg-center opacity-30" aria-hidden="true"></div>
-            <div class="absolute inset-0 opacity-10 hidden md:block" aria-hidden="true">
-                <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
-                <div class="absolute top-40 right-20 w-96 h-96 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl"></div>
+    <div class="hero-section text-white overflow-hidden relative rounded-b-3xl" style="background: linear-gradient(135deg, #000026 0%, #001847 50%, #002266 100%);">
+        <div class="absolute inset-0 bg-[url('/images/upload/photo-1517694712202-14dd9538aa97.webp')] bg-cover bg-center opacity-30"></div>
+        <div class="absolute inset-0 opacity-10 hidden md:block">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+            <div class="absolute top-40 right-20 w-96 h-96 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative py-16 z-10">
+            <div class="flex items-center space-x-8">
+                <div class="flex-1">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Our Testing Process</h1>
+                    <p class="text-base sm:text-lg md:text-xl text-slate-200 max-w-2xl">
+                         A comprehensive, structured approach to ensure your software meets the highest quality standards.
+                    </p>
+                </div>
             </div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative py-16 z-10">
-                <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-                    Our <span class="text-amber-400">Testing Process</span>
-                </h1>
-                <p class="text-base sm:text-lg md:text-xl text-slate-200 max-w-3xl mx-auto">
-                    A comprehensive, structured approach to ensure your software meets the highest quality standards
-                </p>
+        </div>
+    </div>
+
+    
+
+    <!-- Testing Process Steps -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="space-y-12">
+            <!-- Step 1 -->
+            <div class="flex gap-6">
+                <div class="flex-shrink-0">
+                    <div class="w-14 h-14 rounded-full bg-amber-500 flex items-center justify-center">
+                        <span class="text-2xl font-bold text-white">1</span>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Free Discovery & Requirements Review</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        The project's designated Test Manager leads an in-depth review of your project requirements, user flows and technical specifications. This ensures we fully understand the scope, critical functionality, business objectives and determine the scope and depth of testing needed. This stage ensures full alignment before any work begins, and provides the basis for the estimate.
+                    </p>
+                </div>
             </div>
-        </section>
 
-        <!-- Testing Process Steps -->
-        <section aria-label="Testing Process Steps" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <ol class="space-y-12">
-                <li class="flex gap-6">
-                    <div class="flex-shrink-0">
-                        <div class="w-14 h-14 rounded-full bg-amber-500 flex items-center justify-center">
-                            <span class="text-2xl font-bold text-white">1</span>
+            <!-- Step 2 -->
+            <div class="flex gap-6">
+                <div class="flex-shrink-0">
+                    <div class="w-14 h-14 rounded-full bg-amber-500 flex items-center justify-center">
+                        <span class="text-2xl font-bold text-white">2</span>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Estimation & Project Outline</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Following the requirement review, we provide a high level estimate covering expected timelines, resource needs, and cost. This includes an overview of testing phases, environments, and potential risks. You'll receive a transparent overview of what's involved, allowing you to plan confidently before moving forward.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex gap-6">
+                <div class="flex-shrink-0">
+                    <div class="w-14 h-14 rounded-full bg-amber-500 flex items-center justify-center">
+                        <span class="text-2xl font-bold text-white">3</span>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Test Strategy & Planning</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Based on the requirements, we craft a comprehensive test strategy and a detailed test plan, ensuring full coverage across functional, quality performance, and edge case scenarios. This includes defining test objectives, methodologies, environments, entry/exit criteria, and reporting structures. Our planning ensures testing is structured, measurable, and aligned with your development lifecycle. During this process, the project's designated Test Manager will detect potential edge cases that may not have been planned for during development, giving the plus of tightening development before the test execution even starts.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="flex gap-6">
+                <div class="flex-shrink-0">
+                    <div class="w-14 h-14 rounded-full bg-amber-500 flex items-center justify-center">
+                        <span class="text-2xl font-bold text-white">4</span>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Environment & Test Data Setup</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        We prepare all required test environments, accounts, configurations, and datasets to mirror real-world scenarios. Proper setup ensures accurate, reliable testing results and reduces delays caused by environment readiness issues.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="flex gap-6">
+                <div class="flex-shrink-0">
+                    <div class="w-14 h-14 rounded-full bg-amber-500 flex items-center justify-center">
+                        <span class="text-2xl font-bold text-white">5</span>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Test Execution — Manual, Automated, or Hybrid</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Our skilled team conducts thorough testing across functionality, usability, performance, and integration layers. We adapt our approach to your needs—running manual tests, automation scripts, or a blended model. Each test run is tracked for full transparency.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="flex gap-6">
+                <div class="flex-shrink-0">
+                    <div class="w-14 h-14 rounded-full bg-amber-500 flex items-center justify-center">
+                        <span class="text-2xl font-bold text-white">6</span>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Transparent Reporting & Defect Documentation</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        You receive clear, concise reporting throughout the project, including real-time defect tracking and progress updates. All defects are documented with clear steps to reproduce, evidence, severity levels, and recommendations. We also schedule regular sync meetings to keep you informed every step of the way.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="flex gap-6">
+                <div class="flex-shrink-0">
+                    <div class="w-14 h-14 rounded-full bg-amber-500 flex items-center justify-center">
+                        <span class="text-2xl font-bold text-white">7</span>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Re-Testing, Regression & Final Quality Verification</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Once fixes are deployed, we re-test, run regression cycles, and validate all affected areas. Final verification ensures the product meets requirements, functions reliably, and is ready for release with confidence.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step 8 -->
+            <div class="flex gap-6">
+                <div class="flex-shrink-0">
+                    <div class="w-14 h-14 rounded-full bg-amber-500 flex items-center justify-center">
+                        <span class="text-2xl font-bold text-white">8</span>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Quality Report & Recommendations</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        At project completion, we deliver a comprehensive final report summarising the full scope of testing performed, all defects identified, outstanding risks (if any), and expert recommendations for ongoing quality improvement.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expert-Led Testing Section -->
+        <div class="mt-20 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Expert-Led Testing From Start to Finish</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Every project is overseen by highly experienced, fully qualified Senior Test Managers. They lead the requirements review, estimation, and full test planning—ensuring your project begins with a strong, strategic foundation. Because we believe: a project well planned is a project well delivered.
+            </p>
+        </div>
+
+        <!-- CTA Section -->
+        <!-- <div class="mt-20 text-center bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Let's discuss your testing needs and how our proven process can ensure your software's success
+            </p>
+            <a href="contact.html" class="inline-block px-8 py-4 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                Get a Free Consultation
+            </a>
+        </div> -->
+    </div>
+
+    <!-- Footer -->
+    <!-- CTA Section -->
+    <div class="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-950 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-100 mb-4">Ready to Get Started?</h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Let's discuss your testing needs and how our proven process can ensure your software's success
+            </p>
+            <a href="contact.html" class="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                Get a Free Consultation
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-6 mb-6">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-3">
+                        <div class="relative mr-2">
+                            <svg class="h-6 w-6 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 18 22 12 16 6"></path>
+                                <path d="M8 6 2 12 8 18"></path>
+                            </svg>
+                            <svg class="h-4 w-4 text-blue-400 absolute -top-1 -right-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold">
+                            <span class="text-blue-400">INTEGRA</span>
+                            <span class="text-white">QA</span>
+                        </span>
+                    </div>
+                    <p class="text-gray-300 text-xs mb-3 max-w-md">
+                        Professional software testing, mobile app testing, and website maintenance services
+                        to ensure your digital products work flawlessly.
+                    </p>
+                    <div class="space-y-1.5">
+                        <div class="flex items-center">
+                            <svg class="h-3.5 w-3.5 text-blue-400 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <a href="mailto:contact@integraqa.com" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">
+                                contact@integraqa.com
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-3.5 w-3.5 text-blue-400 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <a href="tel:01617928942" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">
+                                (0)161 792 8942
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-3.5 w-3.5 text-blue-400 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span class="text-gray-300 text-xs">Manchester UK</span>
                         </div>
                     </div>
-                    <div class="flex-1">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Free Discovery & Requirements Review</h2>
-                        <p class="text-lg text-gray-700 leading-relaxed">
-                            The project's designated Test Manager leads an in-depth review of your project requirements, user flows, and technical specifications. This ensures full understanding of the scope, critical functionality, and business objectives.
-                        </p>
-                    </div>
-                </li>
+                </div>
 
-                <li class="flex gap-6">
-                    <div class="flex-shrink-0">
-                        <div class="w-14 h-14 rounded-full bg-amber-500 flex items-center justify-center">
-                            <span class="text-2xl font-bold text-white">2</span>
-                        </div>
-                    </div>
-                    <div class="flex-1">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Estimation & Project Outline</h2>
-                        <p class="text-lg text-gray-700 leading-relaxed">
-                            We provide a high-level estimate covering timelines, resource needs, and cost. You'll get an overview of testing phases, environments, and potential risks for confident planning.
-                        </p>
-                    </div>
-                </li>
+                <div>
+                    <h3 class="text-sm font-semibold text-white mb-2">Services</h3>
+                    <ul class="space-y-1">
+                        <li><a href="software-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Desktop App Testing</a></li>
+                        <li><a href="mobile-apps-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Mobile App Testing</a></li>
+                        <li><a href="api-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">API Testing</a></li>
+                        <li><a href="web-application-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Web Application Testing</a></li>
+                        <li><a href="saas-cloud-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">SaaS & Cloud Platform Testing</a></li>
+                        <li><a href="crm-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">CRM Testing</a></li>
+                        <li><a href="website-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Website Testing</a></li>
+                        <li><a href="website-maintenance.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Website Maintenance</a></li>
+                        <li><a href="systems-integration-testing.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Systems Integration Testing</a></li>
+                        <li><a href="maintenance.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Maintenance</a></li>
+                    </ul>
+                </div>
 
-                <li class="flex gap-6">
-                    <div class="flex-shrink-0">
-                        <div class="w-14 h-14 rounded-full bg-amber-500 flex items-center justify-center">
-                            <span class="text-2xl font-bold text-white">3</span>
-                        </div>
-                    </div>
-                    <div class="flex-1">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Test Strategy & Planning</h2>
-                        <p class="text-lg text-gray-700 leading-relaxed">
-                            We craft a comprehensive test strategy and detailed test plan, covering functional, performance, and edge cases. Entry/exit criteria and reporting structures ensure structured, measurable testing.
-                        </p>
-                    </div>
-                </li>
+                <div>
+                    <h3 class="text-sm font-semibold text-white mb-2">Quick Links</h3>
+                    <ul class="space-y-1">
+                        <li><a href="index.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">About</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Contact</a></li>
+                        <li><a href="cookies-policy.html" class="text-gray-300 hover:text-blue-400 transition-colors text-xs">Cookies Policy</a></li>
+                    </ul>
+                </div>
+            </div>
 
-                <li class="flex gap-6">
-                    <div class="flex-shrink-0">
-                        <div class="w-14 h-14 rounded-full bg-amber-500 flex items-center justify-center">
-                            <span class="text-2xl font-bold text-white">4</span>
-                        </div>
+            <div class="pt-4 mt-4 border-t border-gray-700">
+                <div class="flex flex-col md:flex-row justify-between items-center text-xs">
+                    <div class="mb-2 md:mb-0 text-gray-400">
+                        © 2024 INTEGRAQA. All rights reserved.
                     </div>
-                    <div class="flex-1">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Environment & Test Data Setup</h2>
-                        <p class="text-lg text-gray-700 leading-relaxed">
-                            All required test environments, accounts, and datasets are prepared to mirror real-world scenarios, ensuring accurate results and reduced delays.
-                        </p>
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Terms of Service</a>
                     </div>
-                </li>
+                </div>
+                <div class="mt-2 text-center text-gray-400 text-xs">
+                    Integra QA is a trading name of Integral Software Services Ltd, registered in England and Wales
+                </div>
+            </div>
+        </div>
+    </footer>
 
-                <li class="flex gap-6">
-                    <div class="flex-sh
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu) {
+                menu.classList.toggle('hidden');
+            }
+        }
+
+        function toggleServicesMenu() {
+            const submenu = document.getElementById('servicesSubmenu');
+            const arrow = document.getElementById('servicesArrow');
+            if (submenu && arrow) {
+                submenu.classList.toggle('hidden');
+                arrow.classList.toggle('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>
