@@ -871,7 +871,7 @@
                         © 2024 INTEGRAQA. All rights reserved.
                     </div>
                     <div class="flex items-center space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Privacy Policy</a>
+                        <a href="privacy-policy.html" class="text-gray-400 hover:text-blue-400 transition-colors">Privacy Policy</a>
                         <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Terms of Service</a>
                     </div>
                 </div>
@@ -883,38 +883,27 @@
     </footer>
 
     <script>
+        // Mobile menu toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
-            if (menu) {
-                menu.classList.toggle('hidden');
-            }
+            menu.classList.toggle('hidden');
         }
 
         function toggleServicesMenu() {
             const submenu = document.getElementById('servicesSubmenu');
             const arrow = document.getElementById('servicesArrow');
-            if (submenu && arrow) {
-                submenu.classList.toggle('hidden');
-                arrow.classList.toggle('rotate-180');
-            }
+            submenu.classList.toggle('hidden');
+            arrow.classList.toggle('rotate-180');
         }
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function (event) {
-            const menu = document.getElementById('mobileMenu');
-            const menuButton = event.target.closest('button[onclick="toggleMobileMenu()"]');
-
-            if (menu && !menu.contains(event.target) && !menuButton && !menu.classList.contains('hidden')) {
-                menu.classList.add('hidden');
-            }
-        });
-
-        // Close mobile menu when clicking a link
-        document.getElementById('mobileMenu')?.addEventListener('click', function (event) {
-            if (event.target.tagName === 'A') {
-                this.classList.add('hidden');
-            }
-        });
+        // Cookie consent
+        function acceptCookies() {
+            document.getElementById('cookieConsent').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+        if (localStorage.getItem('cookiesAccepted') === 'true') {
+            document.getElementById('cookieConsent').style.display = 'none';
+        }
     </script>
 </body>
 
