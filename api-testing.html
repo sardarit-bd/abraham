@@ -655,9 +655,39 @@
     </footer>
 
     <script>
-    
- 
-</script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu) {
+                menu.classList.toggle('hidden');
+            }
+        }
+
+        function toggleServicesMenu() {
+            const submenu = document.getElementById('servicesSubmenu');
+            const arrow = document.getElementById('servicesArrow');
+            if (submenu && arrow) {
+                submenu.classList.toggle('hidden');
+                arrow.classList.toggle('rotate-180');
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobileMenu');
+            const menuButton = event.target.closest('button[onclick="toggleMobileMenu()"]');
+
+            if (menu && !menu.contains(event.target) && !menuButton && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.getElementById('mobileMenu')?.addEventListener('click', function(event) {
+            if (event.target.tagName === 'A') {
+                this.classList.add('hidden');
+            }
+        });
+    </script>
 
 </body>
 </html>
