@@ -22,33 +22,42 @@
     <meta name="twitter:image" content="https://www.integraqa.com/og-image.png">
     <meta name="twitter:image:alt" content="IntegraQA API Testing Services">
 
-
     <link rel="canonical" href="https://www.integraqa.com/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PM9XF9CQ"></script>
+    <!-- Google Analytics - Consent Based -->
+    <script src="consent-manager.js"></script>
+
+    <!-- Google Analytics (Basic tracking - will be updated based on consent) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PM9XF9CQ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag(){dataLayer.push(arguments);}
+        
+        // Default consent state (will be updated based on user choice)
+        window.dataLayerConsent = {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied'
+        };
+        
+        // Initialize GA with default denied consent
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied'
+        });
+        
         gtag('js', new Date());
-        gtag('config', 'G-49PM9XF9CQ');
-    </script>
+        
+        // Configure with consent settings
+        gtag('config', 'G-49PM9XF9CQ', {
+            'anonymize_ip': true
+        });
+    </script> -->
 </head>
 <body class="pt-20 min-h-screen bg-white">
-    <!-- Cookie Consent Banner -->
-    <!-- <div id="cookieBanner" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0 md:space-x-4 z-[9999]" style="display: none;">
-        <p class="text-sm">
-            We use cookies to improve your experience. By using our site, you agree to our 
-            <a href="privacy.html" class="underline text-blue-400">Privacy Policy</a>.
-        </p>
-        <button id="acceptCookies" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded text-sm">
-            Accept
-        </button>
-    </div> -->
     <!-- Navigation -->
     <nav class="shadow-lg fixed w-full top-0 z-50" style="background-color: #000026;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -546,7 +555,7 @@
 
                 <!-- Automation Testing -->
                 <div class="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color: #000026;">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: #000026;">
                         <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
                             <path d="M8.5 8.5v.01"></path>
@@ -704,6 +713,20 @@
         </div>
     </div>
 
+    <!-- Expert-Led Testing Section -->
+    <div class="pt-16 pb-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Expert-Led Testing From Start to Finish</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Every project is overseen by highly experienced, fully qualified Senior Test Managers. They lead the
+                    requirements review, estimation, and full test planning—ensuring your project begins with a strong,
+                    strategic foundation. Because we believe: a project well planned is a project well delivered.
+                </p>
+            </div>
+        </div>
+    </div>
+
     <!-- CTA Section -->
     <div class="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-950 text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -817,16 +840,97 @@
         </div>
     </footer>
 
-    <!-- Cookie Consent Banner -->
-    <div id="cookieConsent"
-        class="fixed bottom-4 left-4 right-4 bg-gray-800 text-white p-4 rounded shadow-lg flex flex-col md:flex-row justify-between items-center gap-2 z-50">
-        <span>This website uses cookies to improve your experience. By continuing, you agree to our <a href="privacy-policy.html"
-                class="underline text-blue-400">Privacy Policy</a>.</span>
-        <button onclick="acceptCookies()"
-            class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded font-semibold">Accept</button>
+    <!-- Enhanced Cookie Consent Banner -->
+    <div id="cookieConsent" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white rounded-sm m-3 p-4 shadow-lg z-50" style="display: none;">
+        <div class="px-5 mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex-1">
+                    <p class="text-sm md:text-base">
+                        This website uses cookies to improve your experience. We use analytics cookies to understand how you use our site. By continuing, you agree to our 
+                        <a href="privacy-policy.html" class="underline text-blue-400 hover:text-blue-300">Privacy Policy</a> and 
+                        <a href="cookies-policy.html" class="underline text-blue-400 hover:text-blue-300">Cookies Policy</a>.
+                    </p>
+                </div>
+                <div class="flex gap-3">
+                    <button onclick="rejectCookies()" 
+                            class="px-4 py-2 border border-gray-600 rounded hover:bg-gray-700 transition-colors text-sm font-medium">
+                        Reject
+                    </button>
+                    <button onclick="manageCookies()" 
+                            class="px-4 py-2 border border-gray-600 rounded hover:bg-gray-700 transition-colors text-sm font-medium">
+                        Manage
+                    </button>
+                    <button onclick="acceptAllCookies()" 
+                            class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded transition-colors text-sm font-medium">
+                        Accept All
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script>
+    <!-- Cookie Management Modal -->
+    <div id="cookieModal" class="fixed inset-0 bg-black bg-opacity-50 z-50" style="display: none;">
+        <div class="fixed inset-0 flex items-center justify-center p-4">
+            <div class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-gray-900">Cookie Preferences</h3>
+                        <button onclick="closeCookieModal()" class="text-gray-500 hover:text-gray-700">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <p class="text-sm text-gray-600 mb-6">
+                        We use cookies to enhance your browsing experience. Please select which types of cookies you would like to accept.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start justify-between p-3 bg-gray-50 rounded-lg">
+                            <div>
+                                <div class="flex items-center mb-1">
+                                    <input type="checkbox" id="essentialCookies" checked disabled class="mr-2">
+                                    <label for="essentialCookies" class="font-medium text-gray-900">Essential Cookies</label>
+                                </div>
+                                <p class="text-xs text-gray-600">
+                                    Required for the website to function properly. These cannot be disabled.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start justify-between p-3 bg-gray-50 rounded-lg">
+                            <div>
+                                <div class="flex items-center mb-1">
+                                    <input type="checkbox" id="analyticsCookies" class="mr-2">
+                                    <label for="analyticsCookies" class="font-medium text-gray-900">Analytics Cookies</label>
+                                </div>
+                                <p class="text-xs text-gray-600">
+                                    Help us understand how visitors interact with our website by collecting anonymous information.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex justify-between">
+                        <button onclick="saveCookiePreferences()" 
+                                class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm font-medium">
+                            Save Preferences
+                        </button>
+                        <button onclick="acceptAllCookies()" 
+                                class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors text-sm font-medium">
+                            Accept All
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="consent-manager.js"></script>
+
+    <!-- <script>
         // Mobile menu toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
@@ -840,101 +944,141 @@
             arrow.classList.toggle('rotate-180');
         }
 
-        // Cookie consent
-        function acceptCookies() {
+        // Cookie Consent Functions
+        function showCookieBanner() {
+            if (!localStorage.getItem('cookieConsent')) {
+                document.getElementById('cookieConsent').style.display = 'block';
+            }
+        }
+
+        function acceptAllCookies() {
+            // Set consent for all cookies
+            localStorage.setItem('cookieConsent', 'all');
+            localStorage.setItem('analyticsConsent', 'true');
+            
+            // Update GA consent
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted',
+                'ad_storage': 'granted'
+            });
+            
+            // Hide banner and modal
             document.getElementById('cookieConsent').style.display = 'none';
-            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookieModal').style.display = 'none';
+            
+            // Track consent event
+            gtag('event', 'cookie_consent', {
+                'event_category': 'engagement',
+                'event_label': 'accepted_all'
+            });
         }
-        if (localStorage.getItem('cookiesAccepted') === 'true') {
+
+        function rejectCookies() {
+            // Set consent to rejected
+            localStorage.setItem('cookieConsent', 'rejected');
+            localStorage.setItem('analyticsConsent', 'false');
+            
+            // Update GA consent to denied
+            gtag('consent', 'update', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied'
+            });
+            
+            // Hide banner
             document.getElementById('cookieConsent').style.display = 'none';
-        }
-    </script>
-
-    <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            if (menu) {
-                menu.classList.toggle('hidden');
+            
+            // Track rejection event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'cookie_consent', {
+                    'event_category': 'engagement',
+                    'event_label': 'rejected_all'
+                });
             }
         }
 
-        function toggleServicesMenu() {
-            const submenu = document.getElementById('servicesSubmenu');
-            const arrow = document.getElementById('servicesArrow');
-            if (submenu && arrow) {
-                submenu.classList.toggle('hidden');
-                arrow.classList.toggle('rotate-180');
+        function manageCookies() {
+            // Show cookie management modal
+            document.getElementById('cookieModal').style.display = 'block';
+            
+            // Load current preferences
+            const analyticsConsent = localStorage.getItem('analyticsConsent');
+            const analyticsCheckbox = document.getElementById('analyticsCookies');
+            
+            if (analyticsConsent === 'true') {
+                analyticsCheckbox.checked = true;
+            } else {
+                analyticsCheckbox.checked = false;
             }
         }
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('mobileMenu');
-            const menuButton = event.target.closest('button[onclick="toggleMobileMenu()"]');
-
-            if (menu && !menu.contains(event.target) && !menuButton && !menu.classList.contains('hidden')) {
-                menu.classList.add('hidden');
-            }
-        });
-
-        // Close mobile menu when clicking a link
-        document.getElementById('mobileMenu')?.addEventListener('click', function(event) {
-            if (event.target.tagName === 'A') {
-                this.classList.add('hidden');
-            }
-        });
-    </script>
-
-    <!-- Cookie Consent Script -->
-    <!-- <script>
-    (function() {
-        const cookieBanner = document.getElementById('cookieBanner');
-        const acceptBtn = document.getElementById('acceptCookies');
-
-        // Only show banner if consent not yet given
-        if (!localStorage.getItem('cookiesAccepted')) {
-            cookieBanner.style.display = 'flex';
+        function closeCookieModal() {
+            document.getElementById('cookieModal').style.display = 'none';
         }
 
-        // Click handler for Accept
-        acceptBtn.addEventListener('click', function() {
-            localStorage.setItem('cookiesAccepted', 'true');
-            cookieBanner.style.display = 'none';
-
-            // Load Google Analytics after consent
-            if (!window.gtag) {
-                const gaScript = document.createElement('script');
-                gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-49PM9XF9CQ";
-                gaScript.async = true;
-                document.head.appendChild(gaScript);
-
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                window.gtag = gtag; // expose globally
-                gtag('js', new Date());
-                gtag('config', 'G-49PM9XF9CQ');
+        function saveCookiePreferences() {
+            const analyticsCheckbox = document.getElementById('analyticsCookies');
+            
+            // Save preferences
+            localStorage.setItem('cookieConsent', 'custom');
+            localStorage.setItem('analyticsConsent', analyticsCheckbox.checked ? 'true' : 'false');
+            
+            // Update GA consent based on preferences
+            if (analyticsCheckbox.checked) {
+                gtag('consent', 'update', {
+                    'analytics_storage': 'granted'
+                });
+            } else {
+                gtag('consent', 'update', {
+                    'analytics_storage': 'denied'
+                });
             }
-        });
-    })();
-    </script> -->
+            
+            // Hide banner and modal
+            document.getElementById('cookieConsent').style.display = 'none';
+            document.getElementById('cookieModal').style.display = 'none';
+            
+            // Track event
+            gtag('event', 'cookie_consent', {
+                'event_category': 'engagement',
+                'event_label': 'custom_preferences',
+                'analytics_consent': analyticsCheckbox.checked ? 'granted' : 'denied'
+            });
+        }
 
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const banner = document.getElementById("cookieBanner");
-            const acceptBtn = document.getElementById("acceptCookies");
-
-            if (!localStorage.getItem("cookiesAccepted")) {
+        // Initialize cookie consent on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show cookie banner if no consent has been given
+            if (!localStorage.getItem('cookieConsent')) {
                 setTimeout(() => {
-                    banner.classList.add("show");
-                }, 1000); // little delay for smooth entrance
+                    showCookieBanner();
+                }, 1000);
+            } else {
+                // Apply stored consent to GA
+                const analyticsConsent = localStorage.getItem('analyticsConsent');
+                if (analyticsConsent === 'true') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted'
+                    });
+                }
             }
 
-            acceptBtn.addEventListener("click", function () {
-                banner.classList.remove("show");
-                localStorage.setItem("cookiesAccepted", "true");
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const menu = document.getElementById('mobileMenu');
+                const menuButton = event.target.closest('button[onclick="toggleMobileMenu()"]');
+
+                if (menu && !menu.contains(event.target) && !menuButton && !menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                }
+            });
+
+            // Close mobile menu when clicking a link
+            document.getElementById('mobileMenu')?.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                    this.classList.add('hidden');
+                }
             });
         });
     </script> -->
-
 </body>
 </html>

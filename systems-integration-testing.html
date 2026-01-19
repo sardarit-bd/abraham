@@ -27,13 +27,13 @@
     <meta property="twitter:image" content="https://www.integraqa.com/og-image.png">
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PM9XF9CQ"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PM9XF9CQ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-49PM9XF9CQ');
-    </script>
+    </script> -->
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -143,7 +143,7 @@
 
     <!-- Hero Section -->
     <div class="hero-section text-white overflow-hidden relative rounded-b-3xl" style="background: linear-gradient(135deg, #000026 0%, #001847 50%, #002266 100%);">
-        <div class="absolute inset-0 bg-[url('/images/upload/photo-1558494949-ef010cbdcc31.webp')] bg-cover bg-center opacity-30"></div>
+        <div class="absolute inset-0 bg-[url('/images/upload/Integration_testing_page-1_image.webp')] bg-cover bg-center opacity-30"></div>
         <div class="absolute inset-0 opacity-10 hidden md:block">
             <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
             <div class="absolute top-40 right-20 w-96 h-96 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl"></div>
@@ -579,7 +579,96 @@
         </div>
     </footer>
 
-    <script>
+     <!-- Enhanced Cookie Consent Banner -->
+    <div id="cookieConsent" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white rounded-sm m-3 p-4 shadow-lg z-50" style="display: none;">
+        <div class="px-5 mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex-1">
+                    <p class="text-sm md:text-base">
+                        This website uses cookies to improve your experience. We use analytics cookies to understand how you use our site. By continuing, you agree to our 
+                        <a href="privacy-policy.html" class="underline text-blue-400 hover:text-blue-300">Privacy Policy</a> and 
+                        <a href="cookies-policy.html" class="underline text-blue-400 hover:text-blue-300">Cookies Policy</a>.
+                    </p>
+                </div>
+                <div class="flex gap-3">
+                    <button onclick="rejectCookies()" 
+                            class="px-4 py-2 border border-gray-600 rounded hover:bg-gray-700 transition-colors text-sm font-medium">
+                        Reject
+                    </button>
+                    <button onclick="manageCookies()" 
+                            class="px-4 py-2 border border-gray-600 rounded hover:bg-gray-700 transition-colors text-sm font-medium">
+                        Manage
+                    </button>
+                    <button onclick="acceptAllCookies()" 
+                            class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded transition-colors text-sm font-medium">
+                        Accept All
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Management Modal -->
+    <div id="cookieModal" class="fixed inset-0 bg-black bg-opacity-50 z-50" style="display: none;">
+        <div class="fixed inset-0 flex items-center justify-center p-4">
+            <div class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold text-gray-900">Cookie Preferences</h3>
+                        <button onclick="closeCookieModal()" class="text-gray-500 hover:text-gray-700">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <p class="text-sm text-gray-600 mb-6">
+                        We use cookies to enhance your browsing experience. Please select which types of cookies you would like to accept.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start justify-between p-3 bg-gray-50 rounded-lg">
+                            <div>
+                                <div class="flex items-center mb-1">
+                                    <input type="checkbox" id="essentialCookies" checked disabled class="mr-2">
+                                    <label for="essentialCookies" class="font-medium text-gray-900">Essential Cookies</label>
+                                </div>
+                                <p class="text-xs text-gray-600">
+                                    Required for the website to function properly. These cannot be disabled.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start justify-between p-3 bg-gray-50 rounded-lg">
+                            <div>
+                                <div class="flex items-center mb-1">
+                                    <input type="checkbox" id="analyticsCookies" class="mr-2">
+                                    <label for="analyticsCookies" class="font-medium text-gray-900">Analytics Cookies</label>
+                                </div>
+                                <p class="text-xs text-gray-600">
+                                    Help us understand how visitors interact with our website by collecting anonymous information.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex justify-between">
+                        <button onclick="saveCookiePreferences()" 
+                                class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm font-medium">
+                            Save Preferences
+                        </button>
+                        <button onclick="acceptAllCookies()" 
+                                class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors text-sm font-medium">
+                            Accept All
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="consent-manager.js"></script>
+
+    <!-- <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             if (menu) {
@@ -612,6 +701,6 @@
                 this.classList.add('hidden');
             }
         });
-    </script>
+    </script> -->
 </body>
 </html>
