@@ -15,6 +15,14 @@
     <title>Contact Us - INTEGRAQA</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script>
+    (function(){
+        emailjs.init("ZldMS341nOE4GKQgv"); 
+    })();
+    </script>
+
     <!-- Google Analytics -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PM9XF9CQ"></script>
     <script>
@@ -448,6 +456,43 @@
         </div>
     </div>
     <script src="consent-manager.js"></script>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById("submitButton");
+            const messageBox = document.getElementById("formMessage");
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Sending...";
+
+            emailjs.send("service_3949w3f", "template_ngnll1w", {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value,
+            })
+            .then(function() {
+                messageBox.className = "mb-4 p-4 rounded-lg bg-green-100 text-green-800";
+                messageBox.textContent = "Message sent successfully!";
+                messageBox.classList.remove("hidden");
+
+                document.getElementById("contactForm").reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Send Message";
+            }, function(error) {
+                messageBox.className = "mb-4 p-4 rounded-lg bg-red-100 text-red-800";
+                messageBox.textContent = "Failed to send message. Please try again.";
+                messageBox.classList.remove("hidden");
+
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Send Message";
+                console.error(error);
+            });
+        });
+    </script>
+
 
     <!-- <script>
         function toggleMobileMenu() {
